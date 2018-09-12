@@ -7,6 +7,6 @@ This repository will contain all the scripts i use to process images from PE-Spi
 4. Convert the .mvd files to ics/ids files with Fiji using the scripts:
     1. [batch-convert_and_auto-copy.ijm](../blob/master/batch-convert_and_auto-copy.ijm)
     2. (optional) automatically shutdown PC after the files have been converted [automated_shutdown.py](../blob/master/automated_shutdown.py)
-5. Deconvolution of the files with Huygens Remote Manager [Huygens Remote Manager](https://svi.nl/FrontPage)
+5. Deconvolution of the files with [Huygens Remote Manager](https://svi.nl/FrontPage) using the settings noted in [Deconvolution_Settings](../blob/master/Deconvolution_Settings.md)
 6. Transfer of the deconvolved data back to the VAMP
 7. Generation of split-view movies using the script: ....
