@@ -9,4 +9,5 @@ This repository will contain all the scripts i use to process images from PE-Spi
     2. (optional) automatically shutdown PC after the files have been converted [automated_shutdown.py](../blob/master/automated_shutdown.py)
 5. Deconvolution of the files with [Huygens Remote Manager](https://svi.nl/FrontPage) using the settings noted in [Deconvolution_Settings](../blob/master/Deconvolution_Settings.md)
 6. Transfer of the deconvolved data back to the VAMP
-7. Generation of split-view movies using the script: ....
+7. Run [batch-rename.py](../blob/master/batch-rename.py) script to remove the folder name and the (job?)number, added by the Huygens serves.  
+8. Generation of split-view movies using the script: ....
