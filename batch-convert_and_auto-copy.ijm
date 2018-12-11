@@ -1,4 +1,5 @@
 // @File(label="source directory",style="directory") dir0
+// @File(label="source directory",style="directory") dir3
 // @String(label="Is the data in subfolders?", choices= {"Yes", "No"}) subfolder
 // @String(label="open only files of type",choices={".mvd2",".lif",".sld",".czi"}) infiletype
 // @String(label="save as file type",choices={"ICS-1","ICS-2","OME-TIFF", "CellH5"}) outfiletype
@@ -15,7 +16,7 @@
 // -------------------------------------------------------------------------------
 
 setBatchMode(true);
-dir3 = "R:\src"
+//dir3 = "R:/src";
 
 // This paragraph checks, if a logfile already exists and deletes it
 logfile= "V:/Python_Log.txt"
@@ -85,7 +86,8 @@ function converter(infiletype, outfiletype, dir1, dir2) {
 	            print("saving file..."+ title);
 	            outFile = dir2 +File.separator+ title + tgt_suffix;
 	    		run("Bio-Formats Exporter", "save=[" + outFile + "]");
-	            //break
+	    		//break
+
 	    	}
 
 	        run("Close All");  // close all images to free the memory
@@ -104,12 +106,14 @@ function autotransfer(dir2, dir3) {
 	print("copying folder " + tfolder );
 	for (i=0; i<slist.length; i++){
 		sourcetobecopied = dir2+File.separator+slist[i];
-		destinationtobecopied = dir3+File.separator+slist[i];
-		//print(sourcetobecopied);
+		destinationtobecopied = dir3 + File.separator + slist[i];
+		print(sourcetobecopied);
+		print(destinationtobecopied);
 		if (File.exists(destinationtobecopied) == 0) {
 			print("Copying Element: " + i + " of " + slist.length);
 			//print(destinationtobecopied);
 			File.copy(sourcetobecopied, destinationtobecopied);
+
 			print("Copying next element");
 
 		} else {
@@ -126,6 +130,7 @@ if (subfolder == "Yes") {
 	list = getFileList(dir0);
 	for (i=0; i<list.length; i++) {
 		dir1 = dir0 + File.separator + list[i];
+		dir1 = replace(dir1, "/", File.separator);
 		dir2 = dir1 + "ics_ids";
 		if (File.exists(dir2) == 0) {
 			File.makeDirectory(dir2);
