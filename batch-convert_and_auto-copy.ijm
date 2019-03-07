@@ -1,10 +1,9 @@
 // @File(label="source directory",style="directory") dir0
-// @File(label="source directory",style="directory") dir3
+// @File(label="destination directory",style="directory") dir3
 // @String(label="Is the data in subfolders?", choices= {"Yes", "No"}) subfolder
 // @String(label="open only files of type",choices={".mvd2",".lif",".sld",".czi"}) infiletype
 // @String(label="save as file type",choices={"ICS-1","ICS-2","OME-TIFF", "CellH5"}) outfiletype
 // @String(label="Do you want to copy the files automatically to R ?", choices= {"Yes", "No"}) autocopy
-
 
 // -------------------------------------------------------------------------------
 // This is a batch converter to convert between Bio-formats supported file formats.
@@ -23,7 +22,6 @@ logfile= "V:/Python_Log.txt"
 if (File.exists(logfile) == 1) {
 	File.delete("V:/Python_Log.txt");
 };
-
 // check user selection and translate into proper file endings
 if (outfiletype == "ICS-1") {
     tgt_suffix = ".ids";
@@ -34,7 +32,6 @@ if (outfiletype == "ICS-1") {
 } else if (outfiletype == "CellH5") {
     tgt_suffix = ".ch5";
 }
-
 
 function getTimestamp() {
 // generates a Timestamp, no arguments needed
@@ -54,26 +51,19 @@ function getTimestamp() {
 	return TimeString;
 }
 
-
-
-
 function converter(infiletype, outfiletype, dir1, dir2) {
 // converts the files with the ending "infiletype" to the desired "outfiletype"
 // dir1 is the directory for the incoming files
 // dir2 is the targetdirectory
 	list = getFileList(dir1);
-
 	for (i=0; i<list.length; i++) {
 	    // only open an image with the requested extension:
 	    if(endsWith(list[i], infiletype)){
 	    	print("Processing: " + list[i]);
-
 	        incoming = dir1+File.separator+list[i];
-
 	        //open the image at position i as a hyperstack using the bio-formats
 	        //opens all images of a container file (e.g. *.lif, *.sld)
 	       	run("Bio-Formats Importer", "open=[" + incoming + "] color_mode=Default open_all_series view=Hyperstack stack_order=XYCZT use_virtual_stack");
-
 	    	// get image IDs of all open images:
 	    	all = newArray(nImages);
 
@@ -87,17 +77,13 @@ function converter(infiletype, outfiletype, dir1, dir2) {
 	            outFile = dir2 +File.separator+ title + tgt_suffix;
 	    		run("Bio-Formats Exporter", "save=[" + outFile + "]");
 	    		//break
-
 	    	}
-
 	        run("Close All");  // close all images to free the memory
 	    }
 	}
-
 	print(" ");
 	print("All done");
 };
-
 
 function autotransfer(dir2, dir3) {
 // copies all the files from folder dir2 to folder dir3
@@ -113,16 +99,11 @@ function autotransfer(dir2, dir3) {
 			print("Copying Element: " + i + " of " + slist.length);
 			//print(destinationtobecopied);
 			File.copy(sourcetobecopied, destinationtobecopied);
-
 			print("Copying next element");
-
 		} else {
 			print("Element " + i + " does already exist. Copying next Element");
 		}
-
-
 	}
-
 };
 
 print("The script has been started at: " + getTimestamp());
@@ -135,14 +116,12 @@ if (subfolder == "Yes") {
 		if (File.exists(dir2) == 0) {
 			File.makeDirectory(dir2);
 		}
-
 		converter(infiletype, outfiletype, dir1, dir2);
 		if (autocopy == "Yes") {
 			autotransfer(dir2, dir3);
 		};
 	};
 }
-
 
 if (subfolder == "No") {
 	dir1 = dir0;
@@ -156,7 +135,8 @@ if (subfolder == "No") {
 	};
 }
 // finalising the log and saving a txt file
-// this txt file will fullfill the condition to autologout for the external python script
+// this txt file will fullfill the condition to autologout for
+//the external python script
 print("All files have been copied");
 print("The script finished at: " + getTimestamp());
 selectWindow("Log");
