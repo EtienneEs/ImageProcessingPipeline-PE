@@ -12,6 +12,7 @@ the computer / log out of the server. How to use it:
         will lead the programm to (optinal) send an email to the User that the
         processing has been finished and shutdown the computer
 This little script has been written by Etienne Schmelzer.
+Notes: in order to make it work in python 2: raw_input instead of input.
 '''
 
 
@@ -19,7 +20,7 @@ import os
 import time
 import smtplib
 
-# path to your log script 
+# path to your log script
 log_path = "V:\python_log.txt"
 
 automail = "yes"
@@ -33,11 +34,11 @@ def get_credentials(mailAd, pwd, recipient):
     # As we do not want to save passwords to github
     # This function checks if there are credentials and if not asks for them
     if mailAd == "":
-        mailAd = input("Please insert email address\n>")
+        mailAd = raw_input("Please insert email address\n>")
     if pwd == "":
-        pwd = input("Please enter Password for your email {}:\n>".format(mailAd))
+        pwd = raw_input("Please enter Password for your email {}:\n>".format(mailAd))
     if recipient == "":
-        recipient = input("Please insert receiving email:\n>")
+        recipient = raw_input("Please insert receiving email:\n>")
     return(mailAd, pwd, recipient)
 
 def connect_gmail(SSL = "No"):
