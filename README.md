@@ -10,4 +10,4 @@ This repository will contain all the scripts i use to process images from PE-Spi
 5. Deconvolution of the files with [Huygens Remote Manager](https://svi.nl/FrontPage) using the settings noted in [Deconvolution_Settings](../blob/master/Deconvolution_Settings.md)
 6. Transfer of the deconvolved data back to the VAMP
 7. Run [batch-rename.py](../blob/master/batch-rename.py) script to remove the folder name and the (job?)number, added by the Huygens serves.  
-8. Generation of split-view movies using the script: ....
+8. Now you can start to analyse your Data. One option is to generate a Maximum projection of the stack, show the merged channels and the single channels next to each other and combine them in a movie. If you want to do this automatically or semi automatically check out my Fiji-macros repository: [Fiji-macros/18_07_28_r3d-batchprocessing_green_magenta_new.ijm](https://github.com/EtienneEs/Fiji-macros/blob/master/18_07_28_r3d-batchprocessing_green_magenta_new.ijm)
