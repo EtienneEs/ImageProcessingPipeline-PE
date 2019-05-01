@@ -52,7 +52,7 @@ Convertion and deconvolution of the files leads to a rather long filename. For c
 <a name="MPS"></a>
 
 ### Split movies and first analysis: the MPS-movie-maker 
-The resulting image data is further processed and analysed with the Split movie batch script. The script allows choosing a source directory, containing the image data and a destination directory. Further it allows to choose the file input format(e.g. ics). For each file, with the correct file ending, a maximum projection is generated and a composite movie together with inverted greyscale single channel movies are combined with each other. The resulting movie is saved as .avi file and optionally the resulting image file can be saved additionally. The operator can choose if the files are processed:
+The resulting image data is further processed and analysed with the MaximumProjectionSplitmovieMaker [MPS-movieMaker][5]. The script allows choosing a source directory, containing multiple image data files and a destination directory. Further it allows to choose the file input format(e.g. ics). For each file, with the correct file ending, a maximum projection is generated and a composite movie together with inverted greyscale single channel movies are combined with each other. The resulting movie is saved as .avi file and optionally the resulting image file can be saved additionally. The operator can choose if the files are processed:
 - __automatically__: Brightness and Contrast ist set with automatic thresholds or
 - __semi-manually__, allowing individual cropping of the data and manuel setting of Brightness and Contrast.
 
