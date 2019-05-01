@@ -4,8 +4,8 @@ This project is a step by step guide to analyse transcellular lumen formation
 in the zebrafish vasculature. The first part describes the experimental setup,
 followed by a in detail description of the image processing pipeline.  
 
-1. [Background: Experimental procedure](##Experimental procedure)
-2. [Image processing pipeline](##Image processing pipeline)
+1. [Background: Experimental procedure](## Experimental procedure)
+2. [Image processing pipeline](## Image processing pipeline)
 
 
 ## Experimental procedure
@@ -46,11 +46,16 @@ The resulting image data is further processed and analysed with the Split movie 
 
 The combined, final movie will contain a time stamp and scale bar.
 
+Picture of final movie file:
+![Example picture of MPS script Result][p3]
+
+
+Link to an example file:
 ![Final movie of MPS script][m1]
 
 ----
 
-Step by Step guide for coworkers:
+## Step by Step guide for coworkers:
 
 1. Acquisition of the Images with PE-Spinning disk
 2. Transfer of the files to the remote drive (M-drive)
@@ -71,8 +76,9 @@ Step by Step guide for coworkers:
 [w5]: https://svi.nl/FrontPage
 
 
-[p1]: ../master/timeline_microscopy
+[p1]: ../master/timeline_microscopy.png
 [p2]: ../master/timeline_image_processing.png
+[p3]: ../master/picture_of_MPSmovieMaker_result.png
 
 [m1]: ../master/MPS_example.avi
 
