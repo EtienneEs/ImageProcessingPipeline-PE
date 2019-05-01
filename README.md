@@ -2,7 +2,7 @@
 
 This project is a step by step guide to analyse transcellular lumen formation
 in the zebrafish vasculature. The first part describes the experimental setup,
-followed by a in detail description of the image processing pipeline.
+followed by an in detail description of the image processing pipeline.
 
 
 1. [Background: Experimental procedure](#Background)
@@ -66,7 +66,7 @@ Link to an example result of MPSmovieMaker:
 [Result of MPSmovieMaker (.avi file)][m1]
 
 ----
-----
+
 
 <a name="StepByStep"></a>
 
