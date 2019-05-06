@@ -25,7 +25,6 @@ movie = "yes";
 // Defines which channels are active in the composite (1 == active, 0== inactive).
 composite_channels = "11"
 
-
 // This paragraph checks, if a logfile already exists and deletes it
 logfile= "V:/Python_Log.txt"
 if (File.exists(logfile) == 1) {
