@@ -106,4 +106,4 @@ Link to an example result of MPSmovieMaker:
 [2]: ../master/automated_shutdown.py
 [3]: ../master/Deconvolution_Settings.md
 [4]: ../master/batch-rename.py
-[5]: https://github.com/EtienneEs/Fiji-macros/blob/master/18_07_28_r3d-batchprocessing_green_magenta_new.ijm
+[5]: ../master/MPSmovieMaker.ijm
