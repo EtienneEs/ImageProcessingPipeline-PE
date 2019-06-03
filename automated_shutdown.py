@@ -23,7 +23,7 @@ import smtplib
 # path to your log script
 log_path = "V:\python_log.txt"
 
-automail = "yes"
+#automail = "yes"
 # enter your gmail address (you might need to activate an "unkown device" on your gemail
 # account!! This is your python script)
 mailAd = "" # optional (insert gmail adress)
@@ -63,6 +63,9 @@ def sendautomail(mailAd, pwd, recipient, msg):
     gmail.quit()
 
 if __name__=='__main__':
+    
+    automail = raw_input("Do you want to receive an Email notification? (yes / no )\n>")
+    
     # Checks if there is already a logfile and deletes it
     if os.path.isfile(log_path):
         os.remove(log_path)
