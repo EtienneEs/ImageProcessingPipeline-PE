@@ -17,6 +17,7 @@ followed by an in detail description of the image processing pipeline.
 ## Experimental procedure
 _Day0_: Adult zebrafish ([_Danio rerio_][w1]) are set up for mating in 1l cages. Day1: In the next morning the eggs are collected with a sieve with a sieve and cleaned with E3. For transient expression of a construct or generation of a transgenic line the embryos are injected immediately at 1-cell stage. After one to two hours, only fertilised eggs are selected and distributed into petri dishes with blue egg water (E3 supplemented with Methylene blue). Six hours later the plates are controlled for dead embryos. If the plate contains less than five dead eggs: the dead embryos were removed, otherwise only healthy embryos are transferred to a plate with fresh blue egg water. _Day1_: At around 24hpf the embryos are transferred to E3 with 1x PTU. In order to analyse lumen invagination and lumen fusion at more decent working hours (not 23:00), the development of the embryos was accelerated by incubation at 32°C and imaged around 33-35hpf or slowed down by incubation at 25°C and further imaged around 46-60hpf(_Day2_). (Note: Injected embryos showed a higher lethality when incubated at higher temperatures, therefore injected embryos were preferentially incubated at lower temperatures.) In order to analyse transcellular lumen formation in high spatial and temporal resolution the PerkinElmer Spinning disk “UltraviewVox” microscope was used.
 
+![timeline_microscopy.png](timeline_microscopy.png)
 ![timeline_microscopy.png][p1]
 
 <a name="ImageProcessing"></a>
