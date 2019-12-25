@@ -96,7 +96,7 @@ Link to an example result of MPSmovieMaker:
 [w5]: https://svi.nl/FrontPage
 
 
-[p1]: ../master/timeline_microscopy.png
+[p1]: (timeline_microscopy.png)
 [p2]: ../master/timeline_image_processing.png
 [p3]: ../master/picture_of_MPSmovieMaker_result.png
 
