@@ -27,7 +27,7 @@ _Day0_: Adult zebrafish ([_Danio rerio_][w1]) are set up for mating in 1l cages.
 Overview of the image processing pipeline:
 
 
-![Visualization of Image Processing Pipeline][p2]
+![Visualization of Image Processing Pipeline](timeline_image_processing.png)
 
 
 <a name="Conversion"></a>
@@ -68,11 +68,11 @@ The combined, final movie will contain a time stamp and scale bar.
 This script is a batch script; it will process all files with the specified file format in the specified Input folder.
 
 Picture of final movie file:
-![Example picture of MPS script Result][p3]
+![Example picture of MPS script Result](picture_of_MPSmovieMaker_result.png)
 
 
 Link to an example result of MPSmovieMaker:  
-[Result of MPSmovieMaker (.avi file)][m1]
+[Result of MPSmovieMaker (.avi file)](MPS_example.avi)
 
 ----
 
